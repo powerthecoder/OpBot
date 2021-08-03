@@ -22,7 +22,6 @@ class Main(commands.Cog):
     async def about(self, ctx):
         embed=discord.Embed(title="Discord Bot Developer", description="**Developer:** <@291360056002215937> \n**Name:** Leo Power \n**GitHub**: https://github.com/powerthecoder", color=self.color)
         embed.add_field(name="Discord Bot Developer", value="**Developer:** <@291360056002215937> \n**Name:** Leo Power", inline=False)
-        #embed.add_field(name="Steam Status Developer", value="**Developer:** xPaw \n**Name:** Pavel Djundik \n**Website:** https://xpaw.me/", inline=False)
         embed.set_author(name="About")
         await ctx.send(embed=embed)
 
