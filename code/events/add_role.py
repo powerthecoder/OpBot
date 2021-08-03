@@ -17,36 +17,6 @@ import json
 class Main(commands.Cog):
     def __init__(self, client):
         self.client = client
-
-    
-    @commands.Cog.listener()
-    async def on_reaction_add(self, reaction, user):
-        if reaction.message.channel.id == 871967320044617779:
-            if reaction.emoji == "🌶️":
-                Arma = discord.utils.get(user.server.roles, name="Arma")
-                await client.add_roles(user, Arma)
-            elif reaction.emoji == ":two:":
-                DCS = discord.utils.get(user.server.roles, name="DCS")
-                await client.add_roles(user, DCS)
-            elif reaction.emoji == ":three:":
-                Starbase = discord.utils.get(user.server.roles, name="Starbase")
-                await client.add_roles(user, Starbase)
-            elif reaction.emoji == ":four:":
-                stationeers = discord.utils.get(user.server.roles, name="stationeers")
-                await client.add_roles(user, stationeers)
-            elif reaction.emoji == ":five:":
-                cotw = discord.utils.get(user.server.roles, name="cotw")
-                await client.add_roles(user, cotw)
-            elif reaction.emoji == ":six:":
-                wolfpack = discord.utils.get(user.server.roles, name="wolfpack")
-                await client.add_roles(user, wolfpack)
-            elif reaction.emoji == ":seven:":
-                cc = discord.utils.get(user.server.roles, name="cc")
-                await client.add_roles(user, cc)
-            else:
-                pass
-        else:
-            pass
     
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
