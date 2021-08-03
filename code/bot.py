@@ -23,6 +23,7 @@ cogs = [
     'cogs.stationeers',
     'cogs.wolfpack',
     'cogs.help',
+    'cogs.about',
     'events.add_role'
 ]
 
