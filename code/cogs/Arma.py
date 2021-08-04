@@ -20,10 +20,11 @@ class Main(commands.Cog):
     
     @commands.command()
     async def Arma(self, ctx, time, date, *,args):
-        embed=discord.Embed(title="Arma", description=f"**Time:** {time}CST \n**Date:** {date} \n\n**Mission Description:** \n{args} \n\nReact ✅ to participate")
+        embed=discord.Embed(title="Arma", description=f"**Time:** {time}CST \n**Date:** {date} \n**Organizer:** <@{ctx.message.author.id}>\n\n**Mission Description:** \n{args} \n\nReact ✅ to participate")
         await ctx.send("<@&871956970003910696>")
         msg1 = await ctx.send(embed=embed)
         await msg1.add_reaction('✅')
+        await ctx.message.delete()
 
 def setup(client):
     client.add_cog(Main(client))
